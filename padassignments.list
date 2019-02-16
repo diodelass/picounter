@@ -1,0 +1,93 @@
+BOARD ID     		PART NAME                   PURPOSE NOTE
+
+U1							CD4060BCN Counter IC				Crystal driver and frequency divider
+U2							CD4040BE Counter IC					Clock frequency divider
+U3							LS7366R Counter	IC					Channel 1 counter
+U4							LS7366R Counter	IC					Channel 2 counter
+
+XTAL1						4194304 Hz Crystal					Clock oscillator core
+
+R1              1MΩ Resistor                CMOS oscillator feedback control
+R2              100Ω Resistor               Channel 1 input current limiter
+R3              100Ω Resistor               Channel 2 input current limiter
+R4              10MΩ Resistor               Channel 1 static biasing
+R5              10MΩ Resistor               Channel 2 static biasing
+R6              10MΩ Resistor               Channel 1 switchable biasing
+R7              10MΩ Resistor               Channel 2 switchable biasing
+R8              10MΩ Resistor               Channel 1 static biasing
+R9              10MΩ Resistor               Channel 2 static biasing
+R10             10MΩ Resistor               Channel 1 LED control biasing
+R11             10MΩ Resistor               Channel 2 LED control biasing
+R12             10kΩ Resistor               Channel 1 LED current limiter
+R13             10kΩ Resistor               Channel 2 LED current limiter
+R14             100Ω Resistor               User LED current limiter
+R15             1kΩ Resistor                Counting status LED current limiter
+R16             1kΩ Resistor                GPIO disagreement safety current limiter
+R17             1kΩ Resistor                GPIO disagreement safety current limiter
+R18             100Ω Resistor               SPI bus activity LED current limiter
+R19             100Ω Resistor               Coincidence mode LED current limiter
+R20             10kΩ Resistor               Master LED control biasing
+R21             10kΩ Resistor               Counter timing control biasing
+R22             10kΩ Resistor               Channel 1 LFLAG biasing
+R23             10kΩ Resistor               Channel 2 LFLAG biasing
+R24             10kΩ Resistor               Coincidence mode control biasing
+R25             100kΩ Resistor              Master LED control biasing
+R26             10kΩ Resistor               External timing input biasing
+R27             10MΩ Resistor               SPI bus activity LED control biasing
+R28             10kΩ Resistor             	Positive/negative pulse selection biasing
+
+C1							10pF Capacitor							Quartz crystal static loading
+C2							10pF Capacitor							Quartz crystal static loading
+C3							5-20 pF Var. Capacitor			Quartz crystal adjustable loading
+C4							100µF Capacitor							Board-wide power stabilization
+C5							10nF Capacitor							Channel 2 input coupler
+C6							10nF Capacitor							Channel 1 input coupler
+C7							10nF Capacitor							Channel 2 LED control charge pump coupler
+C8							10nF Capacitor							Channel 1 LED control charge pump coupler
+C9							10nF Capacitor							Channel 2 LED control timing pool
+C10							10nF Capacitor							Channel 1 LED control timing pool
+C11							10nF Capacitor							SPI bus activity LED control timing pool
+
+D1							1N4148 Diode								Channel 2 LED control charge pump ground clamp
+D2							1N4148 Diode								Channel 1 LED control charge pump ground clamp
+D3							1N4148 Diode								Channel 2 LED control charge pump block
+D4							1N4148 Diode								Channel 1 LED control charge pump block
+D5							1N4148 Diode								SPI bus activity LED control charge pump block
+
+LED1						Blue rectangular LED				Counting status LED
+LED2						Green rectangular LED				Channel 1 input activity LED
+LED3						Green rectangular LED				Channel 2 input activity LED
+LED4						Red rectangular LED					User LED
+LED5						Yellow rectangular LED			SPI bus activity LED
+LED6						Red rectangular LED					Coincidence mode LED
+
+T1							DMG2302UK N-ch MOSFET				Counting status LED control
+T2							DMG2302UK N-ch MOSFET				User LED control
+T3							DMG2302UK N-ch MOSFET				Master LED control
+T4							DMG2302UK N-ch MOSFET				Channel 1 LED control
+T5							DMG2302UK N-ch MOSFET				Channel 2 LED control
+T6							DMG2302UK N-ch MOSFET				Coincidence mode LED control
+T7							DMG2301LK P-ch MOSFET				SPI bus activity LED control
+
+LL1							SN74LVC1G80	D Latch					Counter clock control
+
+LG1             SN74LVC1G97 Logic Gate 			Counter clock control
+LG2             SN74LVC1G97 Logic Gate  		Counter clock control
+LG3             SN74LVC1G97 Logic Gate  		Counter clock control
+LG4             SN74LVC1G97 Logic Gate  		Counter source selector
+LG5             SN74LVC1G97 Logic Gate  		Counter resolution selector
+LG6             SN74LVC1G97 Logic Gate  		Channel 1 input buffer
+LG7             SN74LVC1G97 Logic Gate  		Channel 2 input buffer
+LG8             SN74LVC1G97 Logic Gate  		Channel 1 biasing switch buffer
+LG9             SN74LVC1G97 Logic Gate  		Channel 2 biasing switch buffer
+LG10            SN74LVC1G97 Logic Gate  		Channel 1 coincidence gate (AND)
+LG11            SN74LVC1G97 Logic Gate  		Channel 2 coincidence gate (OR)
+LG12            SN74LVC1G97 Logic Gate  		External input to INDEX gate
+LG13            SN74LVC1G97 Logic Gate  		Counter status output buffer
+LG14            SN74LVC1G97 Logic Gate  		SPI bus activity detector
+
+CC1							Edge-mount BNC socket				Channel 1 input
+CC2							Edge-mount BNC socket				Channel 2 input
+CC3							Side-mount SMA socket				External timing input
+
+GPIO						20x2 0.1" socket array			Raspberry Pi interface connection
